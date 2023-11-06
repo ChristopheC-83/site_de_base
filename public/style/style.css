@@ -62,17 +62,19 @@ body.dark {
 }
 
 .alert {
+  position: absolute;
+  top: 10px;
+  left: 50%;
   width: 60%;
-  min-height: 40px;
-  margin: 10px auto;
+  transform: translate(-50%, -50%);
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-size: 18px;
-  border: 2px solid #f1f1f1;
   border-radius: 10px;
-  color: #333;
 }
 
 .rouge {
@@ -143,6 +145,7 @@ footer {
   display: flex;
   flex-direction: column;
   margin-left: 220px;
+  position: relative;
 }
 
 .content {

@@ -19,7 +19,7 @@ class MainController
         $this->mainManager = new MainManager();
     }
 
-    
+
 
     // mainController répertorie les pages avec leurs infos respectives
 
@@ -33,7 +33,7 @@ class MainController
             "view" => "views/pages/public/accueil.view.php",
             "template" => "views/commons/template.php",
             "css" => "accueilContainer",
-            "variable_de_demo" => "demo de variable",
+            "variable_de_demo" => "demo de variable"
 
         ];
         Functions::genererPage($data_page);
@@ -54,10 +54,17 @@ class MainController
     {
 
         $datas = $this->mainManager->getThemes();
+        Functions::ajouterMessageAlerte("coucou", "vert");
+        
+        Functions::ajouterMessageAlerte("coucou", "rouge");  // test alerte
+        Functions::ajouterMessageAlerte("coucoucoucoucoucoucoucou", "vert");
+        
+        Functions::ajouterMessageAlerte("coucou", "rouge");  // test alerte
         $data_page = [
             "page_description" => "Description Page 1",
             "page_title" => "titre page 1",
             "datas" => $datas,
+            "js" => ["alert.js"],
             "view" => "views/pages/public/page1.view.php",
             "template" => "views/commons/template.php",
         ];
@@ -65,11 +72,13 @@ class MainController
     }
     public function page2()
     {
+        Functions::ajouterMessageAlerte("coucou", "vert");
         $data_page = [
             "page_description" => "Description Page 2",
             "page_title" => "titre page 2",
             "view" => "views/pages/public/page2.view.php",
             "template" => "views/commons/template.php",
+            "js" => [""],
         ];
         Functions::genererPage($data_page);
     }
@@ -79,7 +88,8 @@ class MainController
             "page_description" => "Description Page 3",
             "page_title" => "titre page 3",
             "view" => "views/pages/public/page3.view.php",
-            "template" => "views/commons/template.php"
+            "template" => "views/commons/template.php",
+            "js" => [""],
 
         ];
         Functions::genererPage($data_page);

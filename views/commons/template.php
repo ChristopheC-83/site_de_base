@@ -20,20 +20,23 @@
     <?php require_once("views/commons/header.php") ?>
 
 
-    <?php
-    if (!empty($_SESSION['alert'])) {
-        foreach ($_SESSION['alert'] as $alert) {
-            echo "<div class='alert " . $alert['type'] . "' role='alert'>
-                        " . $alert['message'] . "
-                    </div>";
-        }
-        unset($_SESSION['alert']);
-    }
-    ?>
+
 
 
     <div class="containing">
-        <div class="content"><?= $page_content ?></div>
+        <div class="content">
+            <?php
+            if (!empty($_SESSION['alert'])) {
+                foreach ($_SESSION['alert'] as $alert) {
+                    echo "<div class='alert " . $alert['type'] . "' role='alert'>
+                        " . $alert['message'] . "
+                    </div>";
+                }
+                unset($_SESSION['alert']);
+            }
+            ?>
+            <?= $page_content ?>
+        </div>
         <?php require_once("views/commons/footer.php") ?>
     </div>
 
@@ -45,6 +48,9 @@
             <script src="<?= URL ?>public/javascript/<?= $fichierJS ?>"> </script>
         <?php endforeach ?>
     <?php endif ?>
+
+
+    <!-- <script src="./public/javascript/alert.js"></script> -->
 </body>
 
 </html>

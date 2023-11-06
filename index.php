@@ -10,7 +10,7 @@ define("URL", str_replace("index.php", "", (isset($_SERVER['HTTPS']) ? "https"  
 
 
 require_once("./controllers/Functions.controller.php");
-// $functions = new Functions();
+$functions = new Functions();
 require_once("./controllers/Main.controller.php");
 $mainController = new MainController();
 
@@ -20,7 +20,7 @@ $mainController = new MainController();
 // site/index.php?page=accueil
 //  on utilise htaccess pour obtenir :
 //  site/accueil 
-// ce qui est pluis convivial et lisible
+// ce qui est plus convivial et lisible
 
 try {
     if (empty($_GET['page'])) {
