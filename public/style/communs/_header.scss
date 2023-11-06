@@ -1,8 +1,12 @@
-.header {
-  background-color: $bg_light_1;
+header {
+  // background-color: plum;
   border: 1px solid violet;
   height: 100vh;
   width: 220px;
   position: fixed;
   top: 0;
+  padding-bottom: 80px;
+  h2{
+  text-align: center;
+  }
 }

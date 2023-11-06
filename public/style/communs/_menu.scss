@@ -1,10 +1,71 @@
-.menu {
+.btnThemesContainer {
   width: 100%;
-  height: 100%;
-  height: 100vh;
-  width: 220px;
+  height: 80%;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  gap: 5px;
+}
+
+.btnTheme {
+  width: 190px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 10px;
+  // // border: 0.5px solid $noir;
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s 0.15s ease-out;
+  p {
+    position: relative;
+    z-index: 5;
+  }
+
+  &::before {
+    content: "";
+    width: 190px;
+    height: 50px;
+    border-radius: 50px;
+    position: absolute;
+    @include posMid;
+    transform-origin: left;
+    z-index: 0;
+    transform: translate(calc(-150% + clamp(50px, 8%, 75px)), -50%);
+    transition: all 0.4s ease-out;
+  }
+  &:hover {
+    font-weight: bold;
+    box-shadow: 0px 0px 0px 0px black;
+    letter-spacing: 4px;
+  }
+
+  &:hover::before {
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+
+.selected_theme {
+  &::before {
+    transform: translate(-50%, -50%);
+  }
+  font-weight: bold;
+  box-shadow: 0px 0px 0px 0px black;
+  letter-spacing: 4px;
+}
+
+@media screen and (max-width: 900px) {
+  .btnThemesContainer {
+    padding-top: 2vh;
+    justify-content: start;
+    gap: 3vh;
+  }
 }

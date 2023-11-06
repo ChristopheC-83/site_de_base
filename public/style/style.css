@@ -52,6 +52,101 @@ body.dark {
   color: #F4D4F4;
 }
 
+.all_themes {
+  background: #f08b7b;
+}
+.all_themes::before {
+  background-color: #e75038;
+}
+
+.formations {
+  background: #fcd279;
+}
+.formations::before {
+  background-color: #fabf41;
+}
+
+.rocket {
+  background: #fff3ae;
+}
+.rocket::before {
+  background-color: #fae25d;
+}
+
+.portfolio {
+  background: #bbffbb;
+}
+.portfolio::before {
+  background-color: #77fc77;
+}
+
+.projets {
+  background: #a2edff;
+}
+.projets::before {
+  background-color: #57ddff;
+}
+
+.tricks {
+  background: #c9b1ff;
+}
+.tricks::before {
+  background-color: #a27aff;
+}
+
+.autres {
+  background: #ebd8fc;
+}
+.autres::before {
+  background-color: #cf98ff;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+label,
+input,
+button {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+h1 {
+  font-size: clamp(32px, 24px + 2.2vw, 60px);
+  letter-spacing: calc(1px + 0.12vw);
+  text-shadow: 1px 1px 2px #53195D;
+}
+
+h2 {
+  font-size: clamp(23px, 20px + 1.65vw, 40px);
+  letter-spacing: calc(1px + 0.04vw);
+  text-shadow: 1px 1px 2px #53195D;
+}
+
+h3 {
+  font-size: clamp(20px, 20px + 1vw, 29px);
+  letter-spacing: calc(1px + 0.02vw);
+  text-shadow: 1px 1px 2px #53195D;
+}
+
+h4 {
+  font-size: clamp(18px, 14px + 0.7vw, 22px);
+  line-height: clamp(22px, 20px + 1.2vw, 35px);
+  text-shadow: 1px 1px 2px #53195D;
+  font-weight: normal;
+}
+
+p {
+  font-size: clamp(16px, 14px + 0.6vw, 20px);
+  line-height: clamp(20px, 20px + 1vw, 33px);
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -59,6 +154,68 @@ body.dark {
   right: 0;
   left: 0;
   background-color: rgba(51, 51, 51, 0.5647058824);
+}
+
+.dark-switch {
+  /* The switch - the box around the slider */
+  margin: 20px;
+  /* Hide default HTML checkbox */
+  /* The slider */
+}
+.dark-switch .switch {
+  display: block;
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.3em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+  z-index: 25;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dark-switch .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+}
+.dark-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 30px;
+  box-shadow: 0px 0px 20px black;
+}
+.dark-switch .slider:before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon, 1.4em);
+  width: var(--size-of-icon, 1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset, 0.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+  transition: 0.4s;
+}
+.dark-switch input:checked + .slider {
+  background-color: black;
+  box-shadow: 0px 0px 20px white;
+}
+.dark-switch input:checked + .slider:before {
+  left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+  background: black;
+  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
 
 .alert {
@@ -99,26 +256,87 @@ footer {
   align-items: center;
 }
 
-.header {
-  background-color: #FEFCFF;
+header {
   border: 1px solid violet;
   height: 100vh;
   width: 220px;
   position: fixed;
   top: 0;
+  padding-bottom: 80px;
+}
+header h2 {
+  text-align: center;
 }
 
-.menu {
+.btnThemesContainer {
   width: 100%;
-  height: 100%;
-  height: 100vh;
-  width: 220px;
+  height: 80%;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  gap: 5px;
 }
 
+.btnTheme {
+  width: 190px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s 0.15s ease-out;
+}
+.btnTheme p {
+  position: relative;
+  z-index: 5;
+}
+.btnTheme::before {
+  content: "";
+  width: 190px;
+  height: 50px;
+  border-radius: 50px;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: left;
+  z-index: 0;
+  transform: translate(calc(-150% + clamp(50px, 8%, 75px)), -50%);
+  transition: all 0.4s ease-out;
+}
+.btnTheme:hover {
+  font-weight: bold;
+  box-shadow: 0px 0px 0px 0px black;
+  letter-spacing: 4px;
+}
+.btnTheme:hover::before {
+  transform: translate(-50%, -50%);
+}
+
+.selected_theme {
+  font-weight: bold;
+  box-shadow: 0px 0px 0px 0px black;
+  letter-spacing: 4px;
+}
+.selected_theme::before {
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 900px) {
+  .btnThemesContainer {
+    padding-top: 2vh;
+    justify-content: start;
+    gap: 3vh;
+  }
+}
 .animTitres {
   width: 90%;
   margin: 25px auto;

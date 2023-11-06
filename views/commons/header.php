@@ -1,6 +1,10 @@
-<header class="header">
+<header>
+    <?php require_once("views/components/switchDark.php") ?>
 
-    <?php require_once("views/commons/menu.php") ?>
-    
+    <div class="entete">
+        <h2>Blog d'un Barpat</h2>
+    </div>
+    <?php require_once("./views/commons/menu.php") ?>
+
 
 </header>

@@ -6,7 +6,7 @@ require_once("./models/pdo.model.php");
 class MainManager extends Model
 {
 
-    function getThemes()
+    public function getThemes()
     {
         $req = "SELECT * FROM themes ORDER BY id_theme asc";
         $stmt = $this->getBDD()->prepare($req);
