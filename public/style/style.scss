@@ -1,0 +1,23 @@
+@import "libs/reset";
+@import "libs/variables";
+@import "libs/darkMode";
+@import "libs/mixins";
+@import "communs/overlay";
+
+
+// fonts
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Roboto Mono', monospace;
+
+body {
+  background-color: $bg_light_1;
+  color: $text_light_2;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dnone {
+  display: none;
+}
