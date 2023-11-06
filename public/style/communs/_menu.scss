@@ -42,7 +42,7 @@
   }
   &:hover {
     font-weight: bold;
-    box-shadow: 0px 0px 0px 0px black;
+    box-shadow: 0px 0px 0px 0px $text_2;
     letter-spacing: 5px;
   }
 
@@ -58,7 +58,7 @@
     transform: translate(-50%, -50%);
   }
   font-weight: bold;
-  box-shadow: 0px 0px 0px 0px black;
+  box-shadow: 0px 0px 0px 0px $text_2;
   letter-spacing: 5px;
 }
 

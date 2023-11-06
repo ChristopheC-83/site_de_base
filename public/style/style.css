@@ -48,10 +48,6 @@ a {
   color: black;
 }
 
-body.dark {
-  color: #F4D4F4;
-}
-
 .all_themes {
   background: #f08b7b;
 }
@@ -120,25 +116,25 @@ a {
 h1 {
   font-size: clamp(32px, 24px + 2.2vw, 60px);
   letter-spacing: calc(1px + 0.12vw);
-  text-shadow: 1px 1px 2px #53195D;
+  text-shadow: 1px 1px 2px #53195d;
 }
 
 h2 {
   font-size: clamp(23px, 20px + 1.65vw, 40px);
   letter-spacing: calc(1px + 0.04vw);
-  text-shadow: 1px 1px 2px #53195D;
+  text-shadow: 1px 1px 2px #53195d;
 }
 
 h3 {
   font-size: clamp(20px, 20px + 1vw, 29px);
   letter-spacing: calc(1px + 0.02vw);
-  text-shadow: 1px 1px 2px #53195D;
+  text-shadow: 1px 1px 2px #53195d;
 }
 
 h4 {
   font-size: clamp(18px, 14px + 0.7vw, 22px);
   line-height: clamp(22px, 20px + 1.2vw, 35px);
-  text-shadow: 1px 1px 2px #53195D;
+  text-shadow: 1px 1px 2px #53195d;
   font-weight: normal;
 }
 
@@ -147,13 +143,17 @@ p {
   line-height: clamp(20px, 20px + 1vw, 33px);
 }
 
+:root {
+  --bg_1: #181118;
+}
+
 .overlay {
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: rgba(51, 51, 51, 0.5647058824);
+  background-color: var(--overlay);
 }
 
 .dark-switch {
@@ -190,10 +190,10 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: white;
+  background-color: #fefcff;
   transition: 0.4s;
   border-radius: 30px;
-  box-shadow: 0px 0px 20px black;
+  box-shadow: 0px 0px 20px #53195d;
 }
 .dark-switch .slider:before {
   position: absolute;
@@ -208,12 +208,12 @@ p {
   transition: 0.4s;
 }
 .dark-switch input:checked + .slider {
-  background-color: black;
-  box-shadow: 0px 0px 20px white;
+  background-color: #53195d;
+  box-shadow: 0px 0px 20px #fefcff;
 }
 .dark-switch input:checked + .slider:before {
   left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
-  background: black;
+  background: #53195d;
   /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
   box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
@@ -247,7 +247,6 @@ p {
 }
 
 footer {
-  color: #333;
   width: 100%;
   height: 30px;
   display: flex;
@@ -312,7 +311,7 @@ header h2 {
 }
 .btnTheme:hover {
   font-weight: bold;
-  box-shadow: 0px 0px 0px 0px black;
+  box-shadow: 0px 0px 0px 0px #53195d;
   letter-spacing: 5px;
 }
 .btnTheme:hover::before {
@@ -321,7 +320,7 @@ header h2 {
 
 .selected_theme {
   font-weight: bold;
-  box-shadow: 0px 0px 0px 0px black;
+  box-shadow: 0px 0px 0px 0px #53195d;
   letter-spacing: 5px;
 }
 .selected_theme::before {
@@ -369,13 +368,14 @@ header h2 {
 }
 
 body {
-  background-color: #FEFCFF;
-  color: #53195D;
+  background-color: var(--bg_1);
+  color: var(--text_2);
   width: 100%;
   min-height: 100vh;
   position: relative;
   font-family: "Roboto", sans-serif;
   display: flex;
+  transition: all 0.3s;
 }
 
 .dnone {

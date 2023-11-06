@@ -1,9 +1,10 @@
 @import "libs/reset";
-@import "libs/variables";
-@import "libs/darkMode";
+@import "libs/colors_light";
+@import "libs/colors_dark";
 @import "libs/mixins";
 @import "libs/themeColors";
 @import "libs/polices";
+@import "libs/darkMode";
 @import "communs/overlay";
 @import "communs/dark_switch";
 @import "communs/alertes";
@@ -13,21 +14,27 @@
 @import "communs/titres";
 @import "communs/containing";
 
-
 // fonts
 // font-family: 'Roboto', sans-serif;
 // font-family: 'Roboto Mono', monospace;
 
+// Utilisez les variables de couleur dans votre feuille de style
+
+
+
 body {
-  background-color: $bg_light_1;
-  color: $text_light_2;
+  background-color: var(--bg_1);
+  color: var(--text_2);
   width: 100%;
   min-height: 100vh;
   position: relative;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   display: flex;
+  transition: all 0.3s;
 }
 
 .dnone {
   display: none;
 }
+
+
