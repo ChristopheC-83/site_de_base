@@ -13,7 +13,7 @@
     <title><?= $page_title ?></title>
 </head>
 
-<body>
+<body class="body">
 
     <?php require_once("views/commons/overlay.php") ?>
 

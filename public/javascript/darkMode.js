@@ -15,10 +15,9 @@ function setUpDarkMode(bool) {
 if (isDarkModeStored != null) {
   if (isDarkModeStored === "true") {
     setUpDarkMode(true);
-    console.log("dark");
+    colorGoingDark()
   } else {
     setUpDarkMode(false);
-    console.log("pas dark");
     colorGoingLight();
   }
 } else {
@@ -32,10 +31,8 @@ function toggleDarkMode() {
   localStorage.setItem("darkMode", stateDarkMode);
   darkModeBtn.checked = stateDarkMode;
   if (stateDarkMode) {
-    console.log("dark");
     colorGoingDark()
   } else {
-    console.log("pas dark");
     colorGoingLight()
   }
 }
@@ -54,13 +51,13 @@ function colorGoingDark() {
   document.documentElement.style.setProperty("--solid_1", "#ab4aba");
   document.documentElement.style.setProperty("--solid_2", "#b658c4");
   document.documentElement.style.setProperty("--text_1", "#e796f3");
-  document.documentElement.style.setProperty("--text_2", "#f4d4f4");
+  document.documentElement.style.setProperty("--text_2", "#FEFCFF");
   document.documentElement.style.setProperty("--overlay", "#f1f1f190");
-  document.documentElement.style.setProperty("--shadow_1", "#333333");
+  document.documentElement.style.setProperty("--shadow_1", "#f1f1f1");
 }
 function colorGoingLight() {
-  document.documentElement.style.setProperty("--bg_1", "#fefcff");
-  document.documentElement.style.setProperty("--bg_2", "#fdf7fd");
+  document.documentElement.style.setProperty("--bg_1", "#FEFCFF");
+  document.documentElement.style.setProperty("--bg_2", "#FDF7FD");
   document.documentElement.style.setProperty("--components_1", "#fbebfb");
   document.documentElement.style.setProperty("--components_2", "#f7def8");
   document.documentElement.style.setProperty("--components_3", "#f2d1f3");
@@ -72,5 +69,5 @@ function colorGoingLight() {
   document.documentElement.style.setProperty("--text_1", "#953ea3");
   document.documentElement.style.setProperty("--text_2", "#53195d");
   document.documentElement.style.setProperty("--overlay", "#33333390");
-  document.documentElement.style.setProperty("--shadow_1", "#f1f1f1");
+  document.documentElement.style.setProperty("--shadow_1", "#333333");
 }

@@ -4,14 +4,12 @@
 @import "libs/mixins";
 @import "libs/themeColors";
 @import "libs/polices";
-@import "libs/darkMode";
 @import "communs/overlay";
 @import "communs/dark_switch";
 @import "communs/alertes";
 @import "communs/footer";
 @import "communs/header";
 @import "communs/menu";
-@import "communs/titres";
 @import "communs/containing";
 
 // fonts
@@ -20,10 +18,8 @@
 
 // Utilisez les variables de couleur dans votre feuille de style
 
-
-
-body {
-  background-color: var(--bg_1);
+.body {
+  background: linear-gradient(270deg, var(--bg_1) 0%, var(--components_3) 100%);
   color: var(--text_2);
   width: 100%;
   min-height: 100vh;
@@ -36,5 +32,7 @@ body {
 .dnone {
   display: none;
 }
+.body.darkMode{
 
-
+  background: linear-gradient(270deg, var(--bg_1) 0%, var(--components_3) 100%);
+}

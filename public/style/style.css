@@ -116,35 +116,31 @@ a {
 h1 {
   font-size: clamp(32px, 24px + 2.2vw, 60px);
   letter-spacing: calc(1px + 0.12vw);
-  text-shadow: 1px 1px 2px #53195d;
+  text-shadow: 1px 1px 2px var(--text_2);
 }
 
 h2 {
   font-size: clamp(23px, 20px + 1.65vw, 40px);
   letter-spacing: calc(1px + 0.04vw);
-  text-shadow: 1px 1px 2px #53195d;
+  text-shadow: 1px 1px 2px var(--text_2);
 }
 
 h3 {
   font-size: clamp(20px, 20px + 1vw, 29px);
   letter-spacing: calc(1px + 0.02vw);
-  text-shadow: 1px 1px 2px #53195d;
+  text-shadow: 1px 1px 2px var(--text_2);
 }
 
 h4 {
   font-size: clamp(18px, 14px + 0.7vw, 22px);
   line-height: clamp(22px, 20px + 1.2vw, 35px);
-  text-shadow: 1px 1px 2px #53195d;
+  text-shadow: 1px 1px 2px var(--text_2);
   font-weight: normal;
 }
 
 p {
   font-size: clamp(16px, 14px + 0.6vw, 20px);
   line-height: clamp(20px, 20px + 1vw, 33px);
-}
-
-:root {
-  --bg_1: #181118;
 }
 
 .overlay {
@@ -190,10 +186,10 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #fefcff;
+  background-color: var(--bg_1);
   transition: 0.4s;
   border-radius: 30px;
-  box-shadow: 0px 0px 20px #53195d;
+  box-shadow: 0px 0px 20px var(--text_2);
 }
 .dark-switch .slider:before {
   position: absolute;
@@ -204,16 +200,16 @@ p {
   left: var(--slider-offset, 0.3em);
   top: 50%;
   transform: translateY(-50%);
-  background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+  background: linear-gradient(40deg, #ff0080, #faebfa 70%);
   transition: 0.4s;
 }
 .dark-switch input:checked + .slider {
-  background-color: #53195d;
-  box-shadow: 0px 0px 20px #fefcff;
+  background-color: var(--bg_1);
+  box-shadow: 0px 0px 20px var(--text_2);
 }
 .dark-switch input:checked + .slider:before {
   left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
-  background: #53195d;
+  background: var(--bg_1);
   /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
   box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
@@ -311,7 +307,7 @@ header h2 {
 }
 .btnTheme:hover {
   font-weight: bold;
-  box-shadow: 0px 0px 0px 0px #53195d;
+  box-shadow: 0px 0px 0px 0px var(--text_2);
   letter-spacing: 5px;
 }
 .btnTheme:hover::before {
@@ -320,7 +316,7 @@ header h2 {
 
 .selected_theme {
   font-weight: bold;
-  box-shadow: 0px 0px 0px 0px #53195d;
+  box-shadow: 0px 0px 0px 0px var(--text_2);
   letter-spacing: 5px;
 }
 .selected_theme::before {
@@ -334,27 +330,6 @@ header h2 {
     gap: 3vh;
   }
 }
-.animTitres {
-  width: 90%;
-  margin: 25px auto;
-}
-.animTitres h1 {
-  font-size: 40px;
-  text-align: center;
-  text-decoration: underline;
-  text-underline-offset: 10px;
-  font-weight: bold;
-  color: violet;
-  margin-bottom: 15px;
-  cursor: pointer;
-}
-.animTitres h2 {
-  font-size: 25px;
-  color: yellowgreen;
-  text-decoration: underline;
-  margin-bottom: 20px;
-}
-
 .containing {
   flex-grow: 1;
   display: flex;
@@ -367,8 +342,8 @@ header h2 {
   flex-grow: 1;
 }
 
-body {
-  background-color: var(--bg_1);
+.body {
+  background: linear-gradient(270deg, var(--bg_1) 0%, var(--components_3) 100%);
   color: var(--text_2);
   width: 100%;
   min-height: 100vh;
@@ -380,4 +355,8 @@ body {
 
 .dnone {
   display: none;
+}
+
+.body.darkMode {
+  background: linear-gradient(270deg, var(--bg_1) 0%, var(--components_3) 100%);
 }/*# sourceMappingURL=style.css.map */
