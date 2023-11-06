@@ -10,7 +10,7 @@
 }
 
 .btnTheme {
-  width: 190px;
+  width: 180px;
   height: 50px;
   border-radius: 50px;
   display: flex;
@@ -30,7 +30,7 @@
 
   &::before {
     content: "";
-    width: 190px;
+    width: 180px;
     height: 50px;
     border-radius: 50px;
     position: absolute;
@@ -43,7 +43,7 @@
   &:hover {
     font-weight: bold;
     box-shadow: 0px 0px 0px 0px black;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
   }
 
   &:hover::before {
@@ -59,7 +59,7 @@
   }
   font-weight: bold;
   box-shadow: 0px 0px 0px 0px black;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
 }
 
 @media screen and (max-width: 900px) {
