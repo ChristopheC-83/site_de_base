@@ -1,5 +1,5 @@
 <?php
-//Dès la connexion à ce site, toujours par ce point "undex.php
+//Dès la connexion à ce site, toujours par ce point "index.php"
 // on démarre une SESSION
 session_start();
 
@@ -9,13 +9,18 @@ define("URL", str_replace("index.php", "", (isset($_SERVER['HTTPS']) ? "https"  
     $_SERVER["PHP_SELF"]));
 
 
-require_once("./controllers/mainController.controller.php");
+require_once("./controllers/Functions.controller.php");
+// $functions = new Functions();
+require_once("./controllers/Main.controller.php");
+$mainController = new MainController();
+
 
 // l'index est le point d'entrée du site
 // au lieu d'avoir, ex pour page d'accueil
 // site/index.php?page=accueil
 //  on utilise htaccess pour obtenir :
-//  site/accueil
+//  site/accueil 
+// ce qui est pluis convivial et lisible
 
 try {
     if (empty($_GET['page'])) {
@@ -27,22 +32,24 @@ try {
 
     switch ($url[0]) {
         case "accueil":
-            pageAccueil();
+            $mainController->pageAccueil();
             break;
         case "page1":
-            page1();
-
+            $mainController->page1();
             break;
         case "page2":
-            page2();
+            $mainController->page2();
 
             break;
         case "page3":
-            page3();
+            $mainController->page3();
+            break;
+        case "pageConnexion":
+            $mainController->pageConnexion();
             break;
         default:
-            throw new Exception("La page demandée n'existe pas.");
+            throw new Exception("La page demandée n'existe pas...");
     }
-} catch (Exception $e) {
-    pageErreur($e->getMessage());
+} catch (Exception $msg) {
+    $MainController->pageErreur($msg->getMessage());
 }

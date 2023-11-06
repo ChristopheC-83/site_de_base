@@ -3,30 +3,16 @@
 // ils gèrent aussi la partie logique du site.
 
 require_once("./models/pdo.model.php");
+class MainManager extends Model
+{
 
-
-// fonction qui simule recup de datas.
-//A effacer, ne sert que d'exemple
-function getDataX(){
-    $data=[
-        "data1"=>"Données de la data1",
-        "data2"=>"Données de la data2",
-        "data3"=>"Données de la data3",
-    ];
-    return $data;
-
+    function getThemes()
+    {
+        $req = "SELECT * FROM themes ORDER BY id_theme asc";
+        $stmt = $this->getBDD()->prepare($req);
+        $stmt->execute();
+        $infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt->closeCursor();
+        return $infos;
+    }
 }
-
-//Commande SQL à adapter au site en construction, au moins le nom de la table
-function getDatas(){
-    $req = getBDD()->prepare("SELECT * from bd_mvc");
-    $req -> execute();
-    $datas = $req ->fetchAll(PDO::FETCH_ASSOC);
-    $req -> closeCursor();
-    return $datas;
-
-
-}
-
-
-

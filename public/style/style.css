@@ -61,6 +61,94 @@ body.dark {
   background-color: rgba(51, 51, 51, 0.5647058824);
 }
 
+.alert {
+  width: 60%;
+  min-height: 40px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  border: 2px solid #f1f1f1;
+  border-radius: 10px;
+  color: #333;
+}
+
+.rouge {
+  background-color: crimson;
+}
+
+.orange {
+  background-color: rgb(255, 150, 14);
+}
+
+.vert {
+  background-color: greenyellow;
+}
+
+footer {
+  border: 1px solid violet;
+  color: #333;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  background-color: #FEFCFF;
+  border: 1px solid violet;
+  height: 100vh;
+  width: 220px;
+  position: fixed;
+  top: 0;
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.animTitres {
+  width: 90%;
+  margin: 25px auto;
+}
+.animTitres h1 {
+  font-size: 40px;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  font-weight: bold;
+  color: violet;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.animTitres h2 {
+  font-size: 25px;
+  color: yellowgreen;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.containing {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 220px;
+}
+
+.content {
+  flex-grow: 1;
+}
+
 body {
   background-color: #FEFCFF;
   color: #53195D;
@@ -68,6 +156,7 @@ body {
   min-height: 100vh;
   position: relative;
   font-family: "Roboto", sans-serif;
+  display: flex;
 }
 
 .dnone {

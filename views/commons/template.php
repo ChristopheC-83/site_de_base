@@ -16,7 +16,9 @@
 <body>
 
     <?php require_once("views/commons/overlay.php") ?>
+
     <?php require_once("views/commons/header.php") ?>
+
 
     <?php
     if (!empty($_SESSION['alert'])) {
@@ -29,9 +31,11 @@
     }
     ?>
 
-    <?= $page_content ?>
 
-    <?php require_once("views/commons/footer.php") ?>
+    <div class="containing">
+        <div class="content"><?= $page_content ?></div>
+        <?php require_once("views/commons/footer.php") ?>
+    </div>
 
 
 
