@@ -32,8 +32,7 @@ $themes = $mainManager-> getThemes();
    <?php endforeach ?>
 
    <a href="<?= URL ?>connexion" class="btnTheme all_themes connexion 
-      <?=
-      (empty($url[0]) || $url[0] === 'connexion') ? 'selected_theme' : '';
+      <?=$url[0] === 'connexion' ? 'selected_theme' : '';
       ?>
    " >
       <p>Connexion</p>
