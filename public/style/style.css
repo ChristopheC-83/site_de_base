@@ -343,7 +343,7 @@ header h2 {
 }
 
 .body {
-  background: linear-gradient(270deg, var(--bg_1) 0%, var(--components_3) 100%);
+  background: linear-gradient(270deg, var(--bg_1) 0%, var(--components_1) 100%);
   color: var(--text_2);
   width: 100%;
   min-height: 100vh;
@@ -355,8 +355,4 @@ header h2 {
 
 .dnone {
   display: none;
-}
-
-.body.darkMode {
-  background: linear-gradient(270deg, var(--bg_1) 0%, var(--components_3) 100%);
 }/*# sourceMappingURL=style.css.map */
