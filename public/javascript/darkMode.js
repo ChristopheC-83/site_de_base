@@ -45,9 +45,9 @@ function colorGoingDark() {
   document.documentElement.style.setProperty("--components_1", "#351a35");
   document.documentElement.style.setProperty("--components_2", "#451d47");
   document.documentElement.style.setProperty("--components_3", "#512454");
-  document.documentElement.style.setProperty("--boder_1", "#5e3061");
-  document.documentElement.style.setProperty("--boder_2", "#734079");
-  document.documentElement.style.setProperty("--boder_3", "#92549c");
+  document.documentElement.style.setProperty("--border_1", "#5e3061");
+  document.documentElement.style.setProperty("--border_2", "#734079");
+  document.documentElement.style.setProperty("--border_3", "#92549c");
   document.documentElement.style.setProperty("--solid_1", "#ab4aba");
   document.documentElement.style.setProperty("--solid_2", "#b658c4");
   document.documentElement.style.setProperty("--text_1", "#e796f3");
@@ -61,9 +61,9 @@ function colorGoingLight() {
   document.documentElement.style.setProperty("--components_1", "#fbebfb");
   document.documentElement.style.setProperty("--components_2", "#f7def8");
   document.documentElement.style.setProperty("--components_3", "#f2d1f3");
-  document.documentElement.style.setProperty("--boder_1", "#e9c2ec");
-  document.documentElement.style.setProperty("--boder_2", "#deade3");
-  document.documentElement.style.setProperty("--boder_3", "#cf91d8");
+  document.documentElement.style.setProperty("--border_1", "#e9c2ec");
+  document.documentElement.style.setProperty("--border_2", "#deade3");
+  document.documentElement.style.setProperty("--border_3", "#cf91d8");
   document.documentElement.style.setProperty("--solid_1", "#ab4aba");
   document.documentElement.style.setProperty("--solid_2", "#a144af");
   document.documentElement.style.setProperty("--text_1", "#953ea3");

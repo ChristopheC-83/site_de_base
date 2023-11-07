@@ -97,6 +97,13 @@ a {
   background-color: #cf98ff;
 }
 
+.connexion {
+  background: #e9e9e9;
+}
+.connexion::before {
+  background-color: #cccccc;
+}
+
 h1,
 h2,
 h3,

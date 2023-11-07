@@ -19,17 +19,25 @@ $themes = $mainManager-> getThemes();
       <?=
       (empty($url[0]) || $url[0] === 'accueil') ? 'selected_theme' : '';
       ?>
-   " style="color:#333">
+   " >
       <p>Accueil</p>
    </a>
 
    <?php foreach ($themes as $theme) : ?>
       <a href="<?= URL ?>theme/<?= $theme['theme'] ?>" class="btnTheme
        <?= $theme['theme'] ?> 
-       <?= $url[1] === $theme['theme'] ? 'selected_theme' : '' ?>" style="color:#333">
+       <?= $url[1] === $theme['theme'] ? 'selected_theme' : '' ?>" >
          <p><?= $theme['theme'] ?></p>
       </a>
    <?php endforeach ?>
+
+   <a href="<?= URL ?>connexion" class="btnTheme all_themes connexion 
+      <?=
+      (empty($url[0]) || $url[0] === 'connexion') ? 'selected_theme' : '';
+      ?>
+   " >
+      <p>Connexion</p>
+   </a>
 
 </div>
 
